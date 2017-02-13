@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<div id="parent">
+<p id="p1">p1</p>
+<p id="p2">p2</p>
+</div>
+<input type="button" value="下一个兄弟节点"/>
+<script>
+//document.getElementById("p1").innerHTML="111";
+var para=document.createElement("h1");
+para.innerHTML="h1";
+document.getElementById("parent").appendChild(para);
+
+var para1=document.createElement("button");
+para1.innerHTML="submit";
+para1.onclick=function(){
+alert(1);
+}
+para1.style.color="white";
+para1.style.background="#2A2AFF";
+document.getElementById("parent").appendChild(para1);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+<button onclick="json();">json1</button>
+<button onclick="json2();">json2</button>
+<script>
+var user={"name":"haibao",
+"age":25
+};
+var admin={"user1":[{"name":"haibao1","age":22}],
+"user2":[{"salary":15000}],
+"user3":[{"home":"shanghai"}]
+};
+function json(){
+alert(user.age+","+user.name);
+}
+function json2(){
+alert(admin.user1[0].name+","+admin.user1[0].age+","+admin.user2[0].salary);
+
+}
+</script>
+</body>
+</html>

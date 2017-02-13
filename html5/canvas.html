@@ -1,0 +1,40 @@
+<!DOCTYPE html><html>
+<head></head>
+<body>
+<canvas width="200" height="100" style="border:solid 2px #CA3109;"></canvas>
+<canvas id="id" width="300" height="200" style="border:solid 2px #CA3109;"></canvas>
+<br>
+<canvas id="id2" width="300" height="200" style="border:solid 2px #CA3109;"></canvas>
+<script>
+var c=document.getElementById("id");
+var ctx=c.getContext("2d");
+ctx.fillStyle="#FFFF00";
+ctx.fillRect(0,0,220,200);
+
+<!--line(0,0)to (250,250)-->
+ctx.moveTo(0,0);
+ctx.lineTo(250,250);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.font="30px Arial";
+ctx.fillStyle="#FF0000"
+ctx.fillText("Hello World",222,111);
+
+ctx.font="30px Arial";
+ctx.strokeText("Hello Wolrd2",10,200);
+
+var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle=grd;
+ctx.fillRect(80,80,50,50);
+
+
+</script>
+</body>
+
+</html>

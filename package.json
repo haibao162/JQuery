@@ -1,0 +1,23 @@
+{
+  "name": "haibao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "iconv-lite": "^0.4.15",
+    "inuitcss": "^6.0.0-beta.4",
+    "multer": "^1.2.1"
+  }
+}

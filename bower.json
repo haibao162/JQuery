@@ -1,0 +1,27 @@
+{
+  "name": "JQuery",
+  "authors": [
+    "haibao162 <2464644603@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.4.1",
+    "angular": "angularjs#^1.5.8",
+    "polymer": "Polymer/polymer#^1.7.1",
+    
+  "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}
