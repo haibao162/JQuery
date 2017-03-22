@@ -3,12 +3,13 @@
 <body>
 <button onclick="json();">json1</button>
 <button onclick="json2();">json2</button>
+<button onclick="json3();">json3</button>
 <script>
-var user={"name":"haibao",
+var user={name:"haibao",
 "age":25
 };
-var admin={"user1":[{"name":"haibao1","age":22}],
-"user2":[{"salary":15000}],
+var admin={"user1":[{"name":"haibao1","age":22},"hello"],
+"user2":[{"salary":15000},{"time":"2017"}],
 "user3":[{"home":"shanghai"}]
 };
 function json(){
@@ -16,8 +17,38 @@ alert(user.age+","+user.name);
 }
 function json2(){
 alert(admin.user1[0].name+","+admin.user1[0].age+","+admin.user2[0].salary);
+console.log(admin.user1[1]);
+console.log(admin.user2[1].time);
+}
+function json3(){
+	var obj = {name:"海宝",age:10,interest:["maths","english"]};
+obj.interest.push("中文");
 
+var array=["1","222","haibao"];
+array.push("name");
+console.log(array);
+var json={"salary":111};
+json.name=333;
+json.age=22;
+console.log(json);
+console.log(json.name);
+var tags=[];
+tags.push("name");
+tags.push({"name":"haibao"});
+console.log(tags[1]);
 }
 </script>
 </body>
 </html>
+
+<!-- ¶¨Òåvar admin={"user1":[{"name":"hai","age":22},"hello"],
+"user2":[{"salary":15000},"he",{"time":2017}],
+"user3":[{"home":"shanghai"}]
+};
+
+admin.user1[0].name="hai"       //admin.user1[0]ÊÇobjectÀàÐÍ,µÈÓÚ{"name":"hai","age":22}
+admin.user1[0].age=22
+admin.user1[1]="hello"              
+admin.user2[0].salary=15000    
+admin.user2[1]="he"
+admin.user2[2].time=2017 -->

@@ -1,0 +1,15 @@
+{
+   "user1" : [1,"haibao",true,{"name":"jiaxing"}],
+   "user2" : {
+      "name" : "suresh",
+	  "password" : "password2",
+	  "profession" : "librarian",
+	  "id": 2
+   },
+   "user3" : {
+      "name" : "ramesh",
+	  "password" : "password3",
+	  "profession" : "clerk",
+	  "id": 3
+   }
+}

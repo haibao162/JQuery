@@ -5,6 +5,7 @@
 <p id="p1">p1</p>
 <p id="p2">p2</p>
 </div>
+<input type="button" value="下一个兄弟节点"/>
 <script>
 //document.getElementById("p1").innerHTML="111";
 var para=document.createElement("h1");
@@ -19,6 +20,18 @@ alert(1);
 para1.style.color="white";
 para1.style.background="#2A2AFF";
 document.getElementById("parent").appendChild(para1);
+
 </script>
+<button onclick="f1();">for循环</button>
 </body>
+<script>
+function f1(){
+var j="";
+var tag=j.split(",");
+console.log(tag[0]);
+var jso={"name":"1"};
+console.log(jso);
+jso.push({"name":"aa"});
+console.log(jso);
+}</script>
 </html>

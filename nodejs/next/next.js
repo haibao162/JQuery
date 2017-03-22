@@ -15,4 +15,3 @@ res.send('dddwww');
 })
 app.listen(3000);
 
-//ÃüÁîĞĞÊä³ö1\n2

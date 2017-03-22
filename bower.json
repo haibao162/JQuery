@@ -1,12 +1,12 @@
 {
-  "name": "JQuery",
+  "name": "haibao",
+  "description": "",
+  "main": "index.js",
   "authors": [
     "haibao162 <2464644603@qq.com>"
   ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
-  "homepage": "",
+  "license": "ISC",
+  "homepage": "https://github.com/haibao162/JQuery",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,13 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "react": "^15.4.1",
     "angular": "angularjs#^1.5.8",
     "polymer": "Polymer/polymer#^1.7.1",
-    
-  "jquery": "^3.1.1"
-  },
-  "devDependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "react": "^15.4.1"
   }
 }

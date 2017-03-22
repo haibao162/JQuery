@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+div{
+background-color:#66FF66; 
+width:100px;
+height:50px;
+float:left;
+margin-left:15px;
+text-align:center;
+padding-top:5px;
+}
+</style>
+</head>
+<script>
+
+//虽然DOM没有提供insertAfter()方法，但是我们可以自己编写一个这样的函数
+function insertAfter(newElement,targetElement) {
+var parent = targetElement.parentNode;
+if ( parent.lastChild == targetElement ) {
+parent.appendChild(newElement);
+} else {
+parent.insertBefore(newElement,targetElement.nextSibling);
+}
+}
+
+function foo(){
+setInterval(goo,2000);
+}
+function goo(){
+
+console.log("test");
+}
+function createTable(){
+var o=document.body;
+var table = document.createElement("table");
+table.border="1px";
+table.height="200px";
+table.width="500px";
+for(var i=0;i<3;i++){
+var tr=document.createElement("tr");
+var td=document.createElement("td");
+tr.appendChild(td); 
+table.appendChild(tr);
+}
+o.appendChild(table);
+}
+
+<!-- function createSpan(){
+var node=document.createElement("span");
+node.innerHTML="data.result[0]";
+node.style.marginLeft="10px";
+var insert=document.getElementsByTagName("span")[2];
+insertAfter(node,insert);
+} -->
+</script>
+<body onload=";">
+
+<div>CPU<br></div>
+<div>Speed<br></div>
+<div>Temperature</div>
+<div>Distance</div>
+</body>
+</html>

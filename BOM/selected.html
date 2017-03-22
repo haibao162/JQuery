@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+<select id="selected">
+<option>CPU</option>
+<option>CompressionRatio</option>
+<option>Hum</option>
+<option>Humidity</option>
+</select>
+<button onclick="test();">test selected</button>
+</body>
+<script>
+function test(){
+var sel=document.getElementById("selected").selectedIndex;
+console.log(document.getElementById("selected").options[sel].value);
+}
+</script>
+</html>
