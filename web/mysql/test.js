@@ -1,4 +1,4 @@
-function test(){
+
 var mysql=require('mysql');
 
 var connection = mysql.createConnection({
@@ -10,17 +10,15 @@ var connection = mysql.createConnection({
 var data=[];
 connection.connect();
 
-var sql='select * from job';
+var sql='select * from raspberry';
 
 connection.query(sql,function (err, result) {
         if(err){
           console.log('[SELECT ERROR] - ',err.message);
           return;
         }
-//console.log(result);
+console.log(result);
 console.log(result[0].name);
 data=result;
 });
 connection.end();
-}
-module.exports=test;

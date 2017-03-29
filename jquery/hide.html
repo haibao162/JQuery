@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="jquery.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+ setInterval(ft,2000);
+});
+
+function ft(){
+document.getElementById("test").innerHTML=(Math.random()*10).toFixed(2);
+}
+</script>
+</head>
+<body>
+	<div id="test">211</div>
+<p>如果您点击我，我会消失。</p>
+<p>点击我，我会消失。</p>
+<p>也要点击我哦。</p>
+
+</body>
+</html>

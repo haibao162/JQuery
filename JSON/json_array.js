@@ -2,7 +2,7 @@ var express=require('express');
 var app=express();
 var fs = require("fs");
 var path=require('path');
-//console.log(path.resolve(__dirname+"/example.html"));
+console.log(__dirname);
  fs.readFile(path.resolve(__dirname+"/array.json"),'utf8', function (err, data) {
        //console.log(data);
        console.log(typeof(data));//string
