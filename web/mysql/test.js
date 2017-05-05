@@ -3,7 +3,7 @@ var mysql=require('mysql');
 
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'haibao',
+  user     : 'haibao162',
   password : '123789',
   database : 'haibao162'
 });
@@ -18,7 +18,7 @@ connection.query(sql,function (err, result) {
           return;
         }
 console.log(result);
-console.log(result[0].name);
+console.log(result[0].device_name);
 data=result;
 });
 connection.end();
