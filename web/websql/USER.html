@@ -1,0 +1,29 @@
+<!DOCTYPE HTML> 
+ <html> 
+ <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <script type="text/javascript"> 
+
+ var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  
+ var msg;  
+ db.transaction(function (tx) { 
+   tx.executeSql('CREATE TABLE IF NOT EXISTS USERS (username char(20) not null unique,password char(20))');  
+   tx.executeSql('INSERT INTO USERS (username,password) VALUES ("haibao", "123789")');  
+   tx.executeSql('INSERT INTO USERS (username,password) VALUES ("admin", "admin")');  
+   msg = '<p>Log message created and row inserted.</p>';  
+   document.querySelector('#status').innerHTML =  msg;  
+ });  
+  db.transaction(function (tx) { 
+   tx.executeSql('SELECT * FROM USERS', [], function (tx, results) { 
+    var len = results.rows.length, i;    
+    for (i = 0; i < len; i++){ 
+      msg = "<p><b>" + results.rows.item(i).username+","+results.rows.item(i).password+"</b></p>";  
+      document.querySelector('#status').innerHTML +=  msg;  
+    } 
+  }, null);  
+ });
+ </script> 
+ </head> 
+ <body> 
+ <div id="status" name="status">Status Message</div> 
+ </body> 
+</html>

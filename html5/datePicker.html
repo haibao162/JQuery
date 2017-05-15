@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	var week=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  $("#datePicker").click(function(){
+  	if($('#selectData').css('display')=="none"){
+    $("#selectData").slideDown();
+    //alert($('.panel').css('display'));
+}else {
+	$("#selectData").slideUp();
+}
+  });
+
+  //选择年份
+$("#startData1,#startData2").click(function(){
+alert($('#start').text().substring(0,3));
+
+  });
+}
+);
+</script>
+<body>
+
+<font style="font-weight:bold;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;">
+Date Picker:
+
+<div id="datePicker" style="position:relative;width:230px;height: 25px;">
+
+<input type="text" style="border:1px solid grey;border-radius:3px;width:230px;height: 25px;font-weight:bold;font-family:Microsoft YaHei;"  readonly="readonly" value="1/1/2017-5/1/2017">
+<img src="images/readonly.jpg" style="width:20px;height:20px;position: absolute;right:0;bottom:0px;">
+
+</div>
+
+<div id="selectData" style="position:relative;display: none;border:1px solid grey;border-radius:3px;height: 200px;width:490px;font-weight:bold;margin-top: 5px;">
+<input id="startData1" type="image" src="images/left.png" style="width:20px;height: 20px;padding-top:10px;padding-left: 20px;outline:none;">
+<span id="start" style="position:absolute;padding-left:30px;padding-top: 10px;font-family:Microsoft YaHei;">Jan 2017</span>
+<input type="image" src="images/right.png" style="width:20px;height:20px;margin-left: 140px;outline:none;">
+<input id="startData2" type="image" src="images/left.png" style="width:20px;height: 20px;padding-top:10px;margin-left: 60px;outline:none;">
+<span id="end" style="position:absolute;padding-left:30px;padding-top: 10px;font-family:Microsoft YaHei;">May 2017</span>
+<input type="image" src="images/right.png" style="width:20px;height:20px;margin-left: 140px;outline:none;"><br>
+
+<span style="font-weight:bold;font-family:Microsoft YaHei;">
+&nbsp;&nbsp;Su&nbsp;&nbsp;Mo&nbsp;&nbsp;Tu&nbsp;&nbsp;We&nbsp;&nbsp;Th&nbsp;&nbsp;Fr&nbsp;&nbsp;Sa</span>
+<span style="font-weight:bold;font-family:Microsoft YaHei;margin-left:40px;">
+Su&nbsp;&nbsp;Mo&nbsp;&nbsp;Tu&nbsp;&nbsp;We&nbsp;&nbsp;Th&nbsp;&nbsp;Fr&nbsp;&nbsp;Sa</span>
+</div>
+
+
+</body>
+</html>

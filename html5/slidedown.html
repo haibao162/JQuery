@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	
+  $(".flip").click(function(){
+  	if($('.panel').css('display')=="none"){
+    $(".panel").slideDown("slow");
+    //alert($('.panel').css('display'));
+}else {
+	$(".panel").slideUp("slow");
+}
+  });
+}
+);
+</script>
+ 
+<style type="text/css"> 
+.div-bor{
+position: relative;width: 200px;
+}
+.icon-user{
+position: absolute;left: 0;z-index:5;
+background-image: url(readonly.jpg); /*引入图片图片*/
+background-repeat: no-repeat; /*设置图片不重复*/
+background-position: 0px 0px; /*图片显示的位置*/
+width: 20px; /*设置图片显示的宽*/
+height: 20px; /*图片显示的高*/
+}
+
+div.panel,p.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+height:120px;
+display:none;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<div class="panel">
+<p>W3School - 领先的 Web 技术教程站点</p>
+<p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+</div>
+ 
+<p class="flip">请点击这里</p>
+<div class="div-bor">
+<i class="icon-user"></i>
+<input type="text" class="user">
+</div></body>
+</html>
