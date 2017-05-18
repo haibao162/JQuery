@@ -5,12 +5,12 @@ app.use(express.static('public'));
 
 app.get('/index.html',function(req,res){
 res.sendFile(__dirname+"/"+"index.html");
-//输入http://localhost:8081/index.html，返回__dirname/public/index.html
+//杈撳叆http://localhost:8081/index.html锛岃繑鍥瀇_dirname/public/index.html
 })
 
 
 app.get('/process_get',function(req,res){
-//输出json格式
+//杈撳嚭json鏍煎紡
 response={
  first_name:req.query.first_name,
  last_name:req.query.last_name
@@ -23,13 +23,13 @@ res.send("<h1>first name:"+req.query.first_name+"</h1><h2>last name"+req.query.l
 })
 
 var bodyParser = require('body-parser');
-// 创建 application/x-www-form-urlencoded 编码解析
+// 鍒涘缓 application/x-www-form-urlencoded 缂栫爜瑙ｆ瀽
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 app.post('/post', urlencodedParser, function (req, res) {
 
-   // 输出 JSON 格式
+   // 杈撳嚭 JSON 鏍煎紡
    response = {
        first_name:req.body.first_name,
        last_name:req.body.last_name
