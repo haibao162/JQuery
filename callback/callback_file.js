@@ -20,6 +20,14 @@ if(err) throw err;
 console.log("File1被读取,内容是"+data);
 });
 
+for(var i=1;i<=3;i++){
+
+	setTimeout(function(){
+		console.log(i);
+	},0);
+}
+
+
 
 
 
