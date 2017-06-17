@@ -1,17 +1,10 @@
-var res=[16,10,11,8,2];
-l=res.length;
-var variables=[];
-(function calculate(i){
-if(i==l-1){
-variables[i]=res[i];
-console.log(i+":"+variables[i]);	
-process.exit();
+var fs=require("fs");
+function callback(err,data){
+if(err){
+	console.log("error");
 }else{
-
-
+	console.log(data);
 }
-})();
-
-function Plus(){
-	
 }
+fs.readFile('file1.txt','utf8',callback);
+console.log("read file async end");
